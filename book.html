@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Book an Electrician in Glasgow | Online Request</title>
+    <meta name="description" content="Book an electrician online. Tell us about your issue, address and availability.">
+    <link rel="canonical" href="https://www.glasgow-electrician.co.uk/book/">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo"><a href="home.html">Electrician Glasgow</a></div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="work-with-us.html">Work with us</a></li>
+            </ul>
+        </nav>
+        <a href="tel:+441234567890" class="call-mobile-fixed">Call Us: +44 1234 567 890</a>
+    </div>
+</header>
+
+<main>
+<section>
+    <header>
+        <h1>Book an electrician in Glasgow</h1>
+        <p>
+            Fill out the form below. We will contact you to confirm your appointment.
+        </p>
+    </header>
+
+    <form method="post" action="send-booking.php">
+
+        <fieldset>
+            <legend>Your contact details</legend>
+
+            <label>Full name</label>
+            <input type="text" name="name" required>
+
+            <label>Phone number</label>
+            <input type="tel" name="phone" required>
+
+            <label>Email address (optional)</label>
+            <input type="email" name="email">
+        </fieldset>
+
+        <fieldset>
+            <legend>Property address</legend>
+
+            <label>Address</label>
+            <input type="text" name="address" required>
+
+            <label>Postcode</label>
+            <input type="text" name="postcode" required>
+
+            <label>Area in Glasgow</label>
+            <select name="area">
+                <option value="">Select</option>
+                <option value="city-centre">City Centre</option>
+                <option value="west-end">West End</option>
+                <option value="southside">Southside</option>
+                <option value="east-end">East End</option>
+                <option value="other">Other</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Your issue</legend>
+
+            <label>Type of service</label>
+            <select name="service_type" required>
+                <option value="">Select</option>
+                <option value="emergency">Emergency</option>
+                <option value="domestic">Domestic</option>
+                <option value="commercial">Commercial</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label>Urgency</label>
+            <select name="urgency" required>
+                <option value="">Select</option>
+                <option value="immediately">Immediately</option>
+                <option value="24-hours">Within 24 hours</option>
+                <option value="this-week">This week</option>
+                <option value="flexible">Flexible</option>
+            </select>
+
+            <label>Describe the problem</label>
+            <textarea name="description" rows="5" required></textarea>
+
+            <label>Preferred date/time (optional)</label>
+            <input type="text" name="preferred_time">
+        </fieldset>
+
+        <fieldset>
+            <legend>Consent</legend>
+            <label>
+                <input type="checkbox" name="consent" required>
+                I agree to be contacted regarding this booking.
+            </label>
+        </fieldset>
+
+        <button type="submit">Send booking request</button>
+    </form>
+
+</section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>&copy; 2025 Electrician Glasgow. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
