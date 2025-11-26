@@ -140,9 +140,9 @@ a:hover {
 .top-banner {
     background: linear-gradient(135deg, var(--secondary-color) 0%, #0f172a 100%);
     color: var(--white);
-    padding: 1rem 0;
+    padding: 0.3rem 0;
     text-align: center;
-    font-size: 0.95rem;
+    font-size: 0.8rem;
     position: relative;
     overflow: hidden;
     
