@@ -145,6 +145,7 @@ a:hover {
     font-size: 0.95rem;
     position: relative;
     overflow: hidden;
+    
 }
 
 .top-banner::before {
