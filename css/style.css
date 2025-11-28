@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border-radius: var(--border-color);
 }
 
 :root {
@@ -14,7 +15,7 @@
     --text-dark: #0f172a;
     --text-light: #64748b;
     --bg-light: #f8fafc;
-    --border-color: #e2e8f0;
+    --border-color: #9abae4;
     --success-color: #10b981;
     --danger-color: #ef4444;
     --white: #ffffff;
@@ -29,6 +30,7 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--white);
+    border-radius: var(--border-color);
 }
 
 img {
@@ -535,14 +537,15 @@ a:hover {
    SECTIONS
    =========================== */
 .section {
-    padding: 4rem 0;
+    padding: 3rem 0; /* uguale circa ad article (3rem) */
 }
 
 .section-inner {
-    max-width: 1200px;
+    max-width: 900px;   /* come article */
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 20px;    /* come article: 20px ai lati */
 }
+
 
 .section h2 {
     font-size: 2rem;
@@ -766,22 +769,25 @@ a:hover {
    FORMS
    =========================== */
 form {
-    max-width: 700px;
-    margin: 2rem auto;
+    max-width: 600px;
+    margin: 1.5rem auto;
     background-color: var(--white);
-    padding: 2rem;
-    border-radius: 16px;
+    padding: 1.5rem 1.75rem;
+    border-radius: 12px;
     box-shadow: var(--shadow-lg);
+    border: 2px solid rgba(15, 23, 42, 0.06);
+    border-top: 4px solid var(--primary-color);
 }
 
 fieldset {
-    border: 2px solid var(--border-color);
-    border-radius: 12px;
-    padding: 2rem;
-    margin-bottom: 2rem;
+    border: 1.5px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.25rem;
     background: linear-gradient(135deg, var(--white) 0%, var(--bg-light) 100%);
     transition: all 0.3s ease;
 }
+
 
 fieldset:hover {
     border-color: var(--primary-color);
@@ -801,11 +807,14 @@ legend {
 
 label {
     display: block;
-    margin-bottom: 0.5rem;
-    color: var(--text-dark);
+    margin-bottom: 0.35rem; /* meno spazio sotto l’etichetta */
+    color: var(--secondary-color);
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;      /* più “da form” */
+    letter-spacing: 0.06em;         /* un po’ di tracking */
 }
+
 
 input[type="text"],
 input[type="email"],
@@ -813,15 +822,16 @@ input[type="tel"],
 select,
 textarea {
     width: 100%;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-    border: 2px solid var(--border-color);
+    padding: 0.75rem 0.9rem;   /* campo più basso */
+    margin-bottom: 0.9rem;     /* meno spazio tra i campi */
+    border: 1.5px solid var(--border-color);
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-family: inherit;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     background-color: var(--white);
 }
+
 
 input:focus,
 select:focus,
@@ -850,18 +860,19 @@ label:has(input[type="checkbox"]) {
 button[type="submit"] {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
     color: var(--white);
-    padding: 1.25rem 2.5rem;
+    padding: 0.9rem 1.5rem;     /* meno alto */
     border: none;
-    border-radius: 50px;
-    font-size: 1.125rem;
+    border-radius: 999px;
+    font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
     width: 100%;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     box-shadow: var(--shadow-md);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.06em;
 }
+
 
 button[type="submit"]:hover {
     transform: translateY(-3px);
@@ -1000,6 +1011,143 @@ section form label {
 .contact-info-card a:hover {
     color: var(--primary-dark);
     transform: scale(1.05);
+}
+
+.section-heading {
+    margin-bottom: 1.75rem;
+}
+
+.section-heading--center {
+    text-align: center;
+}
+
+.section-heading--center h2 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.section-heading--center p {
+    color: var(--text-light);
+    font-size: 1.05rem;
+}
+
+.contact-benefits {
+    background: linear-gradient(135deg, var(--bg-light) 0%, var(--white) 100%);
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+}
+
+.contact-benefits h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1.75rem;
+}
+
+.contact-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.75rem;
+}
+
+.contact-benefit-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.4rem;
+}
+
+.contact-benefit h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.4rem;
+}
+
+.contact-benefit p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.contact-benefits {
+    background: linear-gradient(135deg, var(--bg-light) 0%, var(--white) 100%);
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+}
+
+.contact-benefits h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1.75rem;
+}
+
+.contact-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.75rem;
+}
+
+.contact-benefit-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.4rem;
+}
+
+.contact-benefit h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.4rem;
+}
+
+.contact-benefit p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.faq-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.4rem;
+}
+
+.faq-item p {
+    color: var(--text-light);
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+.areas-served-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.btn-pill {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-pill--light {
+    background-color: var(--white);
+    color: var(--primary-color);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-pill--outline-light {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-pill--light:hover,
+.btn-pill--outline-light:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
 }
 
 /* ===========================
@@ -1284,7 +1432,7 @@ section section a {
 
 section section a:hover {
     background-color: var(--primary-dark);
-    transform: translateY(-2px);
+    transform: translateY(-px);
     box-shadow: var(--shadow-md);
 }
 
@@ -1974,11 +2122,74 @@ select[name="urgency"] option[value="immediately"] {
         grid-template-columns: 1fr;
     }
     
-    .contact-info-grid,
-    .services-overview,
-    .benefits-grid {
-        grid-template-columns: 1fr;
-    }
+    /* Contact page specific sections */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.contact-info-card {
+    background: linear-gradient(135deg, var(--white) 0%, var(--bg-light) 100%);
+    padding: 1.25rem 1.5rem;           /* PIÙ COMPATTE */
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1.5px solid transparent;
+}
+
+.contact-info-card--compact {
+    padding: 1.1rem 1.3rem;            /* ancora più piccole per Call/Email/Area */
+}
+
+.contact-info-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+.contact-info-card h2 {
+    color: var(--primary-color);
+    font-size: 1.1rem;                 /* più piccolo */
+    margin-bottom: 0.5rem;
+}
+
+.contact-info-label {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info-main {
+    margin: 0.4rem 0 0.3rem;
+}
+
+.contact-main-link {
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.contact-info-meta {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.contact-area-list {
+    list-style: none;
+    margin: 0.5rem 0 0.75rem;
+    padding: 0;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.contact-area-list li {
+    padding: 0.2rem 0;
+}
+
     
     .values-grid {
         grid-template-columns: 1fr;

@@ -37,59 +37,213 @@
         </header>
 
     <main>
-        <section>
-            <header>
-                <h1>Contact us – Electricians in Glasgow</h1>
+    <!-- Hero Header -->
+    <section>
+        <header>
+            <h1>Contact Our Glasgow Electricians</h1>
+            <p>
+                Need an electrician in Glasgow? We're here to help with all your electrical needs. 
+                Available for call and scheduled appointments.
+            </p>
+        </header>
+    </section>
+
+    <!-- Contact Methods Grid -->
+    <section class="section">
+        <div class="section-inner">
+            <div class="contact-info-grid">
+                <div class="contact-info-card contact-info-card--compact">
+                    <h2>Call Us</h2>
+                    <p class="contact-info-label"><strong> Phone Line</strong></p>
+                    <p class="contact-info-main">
+                        <a href="tel:+447000000000" class="contact-main-link">+44 7000 000000</a>
+                    </p>
+                    <p class="contact-info-meta">
+                        Available day and night<br>
+                        Average response time: Under 1 hour
+                    </p>
+                </div>
+
+                <div class="contact-info-card contact-info-card--compact">
+                    <h2>Email Us</h2>
+                    <p class="contact-info-label"><strong>General Inquiries</strong></p>
+                    <p class="contact-info-main">
+                        <a href="mailto:info@glasgow-electrician.co.uk" class="contact-main-link">
+                            info@glasgow-electrician.co.uk
+                        </a>
+                    </p>
+                    <p class="contact-info-meta">
+                        We typically respond within 2 hours<br>
+                        during business hours
+                    </p>
+                </div>
+
+                <div class="contact-info-card contact-info-card--compact">
+                    <h2>Service Area</h2>
+                    <p class="contact-info-label"><strong>Areas We Cover</strong></p>
+                    <div class="contact-area-list">
+                        <p>✓ City Centre</p>
+                        <p>✓ West End</p>
+                        <p>✓ Southside</p>
+                        <p>✓ East End</p>
+                        <p>✓ Surrounding Areas</p>
+                    </div>
+                    <p class="contact-info-meta">
+                        Not sure if we cover your area?<br>
+                        Give us a call to check!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Contact Form -->
+    <section class="section">
+        <div class="section-inner">
+            <div class="section-heading section-heading--center">
+                <h2>Send Us a Message</h2>
                 <p>
-                    Need an electrician? Contact us via phone, email, or the form below.
+                    Fill out the form below and we'll get back to you as soon as possible.
                 </p>
-            </header>
+            </div>
 
-            <section>
-                <h2>Phone</h2>
-                <p><a href="tel:+447000000000">+44 7000 000000</a></p>
-            </section>
+            <form method="post" action="">
+                <div class="form-grid">
+                    <div>
+                        <label for="id_name">Full Name *</label>
+                        <input type="text" id="id_name" name="name" placeholder="John Smith" required>
+                    </div>
 
-            <section>
-                <h2>Email</h2>
-                <p><a href="mailto:info@glasgow-electrician.co.uk">info@glasgow-electrician.co.uk</a></p>
-            </section>
+                    <div>
+                        <label for="id_email_contact">Email Address *</label>
+                        <input type="email" id="id_email_contact" name="email" placeholder="john@example.com" required>
+                    </div>
+                </div>
 
-            <section>
-                <h2>Address</h2>
+                <div class="form-row">
+                    <label for="id_phone_contact">Phone Number</label>
+                    <input type="tel" id="id_phone_contact" name="phone" placeholder="+44 7000 000000">
+                </div>
+
+                <div class="form-row">
+                    <label for="id_subject">Subject</label>
+                    <select id="id_subject" name="subject">
+                        <option value="">Select a subject...</option>
+                        <option value="emergency">Emergency Electrical Service</option>
+                        <option value="quote">Request a Quote</option>
+                        <option value="domestic">Domestic Electrical Work</option>
+                        <option value="commercial">Commercial Electrical Work</option>
+                        <option value="other">Other Inquiry</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="id_message">Your Message *</label>
+                    <textarea id="id_message" name="message" rows="6" placeholder="Tell us about your electrical needs..." required></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section">
+        <div class="section-inner">
+            <div class="contact-benefits">
+                <h2>Why Choose Glasgow On-Demand Electrician?</h2>
+                <div class="contact-benefits-grid">
+                    <div class="contact-benefit">
+                        <div class="contact-benefit-icon">⚡</div>
+                        <h3>Fast Response</h3>
+                        <p>Average response time under 1 hour for emergencies</p>
+                    </div>
+
+                    <div class="contact-benefit">
+                        <div class="contact-benefit-icon">🎓</div>
+                        <h3>Qualified Team</h3>
+                        <p>Fully certified and insured electricians</p>
+                    </div>
+
+                    <div class="contact-benefit">
+                        <div class="contact-benefit-icon">💰</div>
+                        <h3>Clear Pricing</h3>
+                        <p>Transparent quotes with no hidden fees</p>
+                    </div>
+
+                    <div class="contact-benefit">
+                        <div class="contact-benefit-icon">⭐</div>
+                        <h3>5-Star Service</h3>
+                        <p>Rated excellent by our Glasgow customers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="section-inner">
+            <h2 class="section-heading section-heading--center">Frequently Asked Questions</h2>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3>How quickly can you respond to an emergency?</h3>
+                    <p>
+                        We aim to respond to emergency calls within 1 hour across Glasgow. Our electricians are strategically located 
+                        throughout the city to ensure fast response times when you need us most.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Do you provide free quotes?</h3>
+                    <p>
+                        Yes! We provide free, no-obligation quotes for all non-emergency work. Simply contact us with details of your 
+                        electrical needs and we'll provide a transparent estimate.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What areas of Glasgow do you cover?</h3>
+                    <p>
+                        We cover all areas of Glasgow including City Centre, West End, Southside, East End and surrounding areas. 
+                        If you're unsure whether we cover your location, just give us a call.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Are you available outside business hours?</h3>
+                    <p>
+                        Yes! We offer emergency electrical services. For non-emergency work, we also offer flexible appointment 
+                        times including evenings and weekends.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section">
+        <div class="section-inner">
+            <div class="areas-served">
+                <h2>Ready to Get Started?</h2>
                 <p>
-                    Glasgow On-Demand Electrician<br>
-                    123 Example Street<br>
-                    Glasgow G1 1AA
+                    Whether it's an emergency or a planned project, we're here to help.<br>
+                    Contact us today and experience professional electrical service in Glasgow.
                 </p>
-            </section>
+                <div class="areas-served-actions">
+                    <a href="tel:+447000000000" class="btn-pill btn-pill--light">
+                        📞 Call Now
+                    </a>
+                    <a href="book.html" class="btn-pill btn-pill--light">
+                        📝 Book Online
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 
-            <section>
-                <h2>Service area</h2>
-                <p>
-                    We cover all Glasgow areas including City Centre, West End, Southside and East End.
-                </p>
-            </section>
-
-            <section>
-                <h2>Contact form</h2>
-                <form method="post" action="send-message.php">
-
-                    <label>Name</label>
-                    <input type="text" name="name" required>
-
-                    <label>Email</label>
-                    <input type="email" name="email" required>
-
-                    <label>Message</label>
-                    <textarea name="message" rows="4" required></textarea>
-
-                    <button type="submit">Send message</button>
-                </form>
-            </section>
-
-        </section>
-    </main>
 
     <footer class="site-footer">
         <div class="container footer-inner">
