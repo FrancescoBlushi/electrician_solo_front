@@ -1932,7 +1932,7 @@ select[name="urgency"] option[value="immediately"] {
 
 @media (max-width: 768px) {
     body {
-        padding-bottom: 80px;
+        padding-bottom: 0px;
     }
     
     .section {
